@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Michael G. Workman Contact";
+
+}
+
+<!-- Right Column -->
+<div class="w3-twothird">
+
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+        
+        <br />
+        <div class="w3-container w3-teal">
+            <h2>Contact Form</h2>
+        </div>
+        <br />
+        <br />
+
+        <form method="post" action="/Home/Contact" class="w3-container">
+
+            @Html.AntiForgeryToken()
+
+            <label for="ContactName" class="w3-text-teal"><b>Name</b></label>
+            <input type="text" class="w3-input w3-border w3-round" id="ContactName" name="ContactName" placeholder="Name">
+            <br />
+
+            <label for="ContactEmail" class="w3-text-teal"><b>Email</b></label>
+            <input type="email" class="w3-input w3-border w3-round" id="ContactEmail" name="ContactEmail" placeholder="Email">
+            <br />
+
+            <label for="ContactPhone" class="w3-text-teal"><b>Phone (include area code)</b></label>
+            <input type="text" class="w3-input w3-border w3-round" id="ContactPhone" name="ContactPhone" placeholder="Phone">
+            <br />
+
+            <label for="ContactCategories_ID" class="w3-text-teal"><b>Interest</b></label><br />
+            @Html.DropDownList("ContactCategories_ID", (SelectList)ViewBag.Categories, "Select an Interest")
+            <br />
+            <br />
+
+            <label for="WebMessage" class="w3-text-teal"><b>Message</b></label>
+            <textarea class="w3-input w3-border w3-round" id="WebMessage" name="WebMessage"></textarea>
+            <br />
+            <br />
+
+            <button type="submit" class="w3-btn w3-blue-grey">Send</button>
+        </form>
+        <br />
+        <br />
+
+    </div>
+
+</div>
