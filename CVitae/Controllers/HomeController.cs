@@ -44,33 +44,41 @@ namespace CVitae.Controllers
         {
             ViewBag.Message = "Michael G. Workman Contact";
 
-            // update database with contact information
-            if (ModelState.IsValid)
+            try
             {
+                // update database with contact information
+                if (ModelState.IsValid)
+                {
 
-                db.EmailContacts.Add(emailContact);
-                db.SaveChanges();
+                    db.EmailContacts.Add(emailContact);
+                    db.SaveChanges();
 
-                // create Gmailer object and initialize data
-                OutlookMailer mailer = new OutlookMailer();
-                mailer.ToEmail = "michael.g.workman@gmail.com";
-                mailer.FromEmail = emailContact.ContactEmail;
-                mailer.FromName = emailContact.ContactName;
+                    // create Gmailer object and initialize data
+                    OutlookMailer mailer = new OutlookMailer();
+                    mailer.ToEmail = "michael.g.workman@gmail.com";
+                    mailer.FromEmail = emailContact.ContactEmail;
+                    mailer.FromName = emailContact.ContactName;
 
-                // get the email category and set the email Body
-                string emailCategory = db.ContactCategories.Where(x => x.ID == emailContact.ContactCategories_ID).SingleOrDefault().category;
-                mailer.Subject = "Michael G. Workman Career Inquiry - Category: " + emailCategory;
-                mailer.Body = "From Name: " + emailContact.ContactName + " From Email: " + emailContact.ContactEmail + " Phone: " + emailContact.ContactPhone + "<br>" + emailContact.WebMessage;
+                    // get the email category and set the email Body
+                    string emailCategory = db.ContactCategories.Where(x => x.ID == emailContact.ContactCategories_ID).SingleOrDefault().category;
+                    mailer.Subject = "Michael G. Workman Career Inquiry - Category: " + emailCategory;
+                    mailer.Body = "From Name: " + emailContact.ContactName + " From Email: " + emailContact.ContactEmail + " Phone: " + emailContact.ContactPhone + "<br>" + emailContact.WebMessage;
 
-                // send email
-                mailer.Send();
+                    // send email
+                    mailer.Send();
 
-                return View("ContactConfirmation");
+                    return View("ContactConfirmation");
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "Contact View, Model State Not Valid, Email Not Sent.";
+
+                    return View("~/Views/Shared/Error.cshtml");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ViewBag.ErrorMessage = "Contact View, Model State Not Valid, Email Not Sent.";
-
+                ViewBag.ErrorMessage = "Error Encountered: " + ex.Message + " Inner Exception: " + ex.InnerException;
                 return View("~/Views/Shared/Error.cshtml");
             }
         }
