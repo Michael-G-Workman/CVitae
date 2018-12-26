@@ -1,4 +1,10 @@
-First version of CV MVC web application which will be on domain michaelgworkman.com
+Cvitae
+
+By Michael G. Workman
+
+Azure Cloud Platform Temporary URL: https://cvitae20181226024341.azurewebsites.net/
+
+First version of CV MVC 5 web application which will be on domain michaelgworkman.com
 
 This MVC 5 web application has been implemented with database first Entity Framework,
 but is different than a normal MVC web application in that it uses GUID for primary key ID in EF mdoels and database tables,
