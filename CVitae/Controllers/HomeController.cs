@@ -103,7 +103,7 @@ namespace CVitae.Controllers
                 smtp.Port = OutlookPort;
                 smtp.EnableSsl = OutlookSSL;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new System.Net.NetworkCredential("michael.g.workman@outlook.com", "C4m3r0n14n5^&*");
+                smtp.Credentials = new System.Net.NetworkCredential("michael.g.workman@outlook.com", "REDACTED");
 
                 MailMessage message = new MailMessage();
                 message.From = new MailAddress("michael.g.workman@outlook.com");
