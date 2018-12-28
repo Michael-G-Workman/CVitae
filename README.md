@@ -4,6 +4,8 @@ By Michael G. Workman
 
 Azure Cloud Platform Temporary URL: https://cvitae20181226024341.azurewebsites.net/
 
+Permanent URL: http://www.michaelgworkman.com
+
 First version of CV MVC 5 web application which will be on domain michaelgworkman.com
 
 This MVC 5 web application has been implemented with database first Entity Framework,
