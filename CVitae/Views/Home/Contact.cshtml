@@ -20,15 +20,15 @@
             @Html.AntiForgeryToken()
 
             <label for="ContactName" class="w3-text-teal"><b>Name</b></label>
-            <input type="text" class="w3-input w3-border w3-round" id="ContactName" name="ContactName" placeholder="Name">
+            <input type="text" class="w3-input w3-border w3-round" id="ContactName" name="ContactName" maxlength="150" placeholder="Name">
             <br />
 
             <label for="ContactEmail" class="w3-text-teal"><b>Email</b></label>
-            <input type="email" class="w3-input w3-border w3-round" id="ContactEmail" name="ContactEmail" placeholder="Email">
+            <input type="email" class="w3-input w3-border w3-round" id="ContactEmail" name="ContactEmail" maxlength="100" placeholder="Email">
             <br />
 
             <label for="ContactPhone" class="w3-text-teal"><b>Phone (include area code)</b></label>
-            <input type="text" class="w3-input w3-border w3-round" id="ContactPhone" name="ContactPhone" placeholder="Phone">
+            <input type="text" class="w3-input w3-border w3-round" id="ContactPhone" name="ContactPhone" maxlength="20" placeholder="Phone">
             <br />
 
             <label for="ContactCategories_ID" class="w3-text-teal"><b>Interest</b></label><br />
@@ -37,7 +37,7 @@
             <br />
 
             <label for="WebMessage" class="w3-text-teal"><b>Message</b></label>
-            <textarea class="w3-input w3-border w3-round" id="WebMessage" name="WebMessage"></textarea>
+            <textarea class="w3-input w3-border w3-round" id="WebMessage" name="WebMessage" maxlength="1000"></textarea>
             <br />
             <br />
 
