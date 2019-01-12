@@ -21,4 +21,4 @@ This solution works with LocalDB sql server, but changing the CVitaeContext conn
 
 This application is freely distributable under terms of MIT open source license.
 
-(c) Copyright Abion Technology
+(c) Copyright Michael G. Workman
