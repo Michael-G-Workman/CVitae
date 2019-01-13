@@ -1,4 +1,4 @@
-Cvitae
+CVitae
 
 By Michael G. Workman
 
