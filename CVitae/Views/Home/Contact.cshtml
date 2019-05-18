@@ -7,7 +7,7 @@
 <div class="w3-twothird">
 
     <div class="w3-container w3-card w3-white w3-margin-bottom">
-        
+
         <br />
         <div class="w3-container w3-teal">
             <h2>Contact Form</h2>
@@ -15,7 +15,8 @@
         <br />
         <br />
 
-        <form method="post" action="/Home/Contact" class="w3-container">
+        @* Contact Form *@
+        <form method="post" id="ContactForm" action="/Home/Contact" class="w3-container">
 
             @Html.AntiForgeryToken()
 
@@ -39,13 +40,76 @@
             <label for="WebMessage" class="w3-text-teal"><b>Message</b></label>
             <textarea class="w3-input w3-border w3-round" id="WebMessage" name="WebMessage" maxlength="1000"></textarea>
             <br />
-            <br />
 
-            <button type="submit" class="w3-btn w3-blue-grey">Send</button>
         </form>
+
+        <div id="ValidationMessage" class="text-danger hide" style="color:red;">
+        </div>
+        <br />
+        <br />
+        @* Submit Button Outside of Form to Facilitate JQuery Form Validation *@
+        <button id="SendBTN" class="w3-btn w3-blue-grey">Send</button>
         <br />
         <br />
 
     </div>
 
 </div>
+
+@* JQuery Code for Form Validation *@
+@section Scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#SendBTN").click(function () {
+
+                // vars for form validation
+                var formValidated = true;
+                var validationMessage = "Error: ";
+
+                // Contact Name
+                if ($("#ContactName").val().trim() == "") {
+                    formValidated = false;
+                    validationMessage = validationMessage + "Contact Name Required<br />";
+                }
+
+                // Contact Email
+                if ($("#ContactEmail").val().trim() == "") {
+                    formValidated = false;
+                    validationMessage = validationMessage + "Contact Email Required<br />";
+                }
+
+                // Contact Phone
+                if ($("#ContactPhone").val().trim() == "") {
+                    formValidated = false;
+                    validationMessage = validationMessage + "Contact Phone Number Required<br />";
+                }
+
+                // Contact Categories
+                if ($("#ContactCategories_ID").val() == "") {
+                    formValidated = false;
+                    validationMessage = validationMessage + "Contact Interest Required<br />";
+                }
+
+                // Web Message
+                if ($("textarea#WebMessage").val().trim() == "") {
+                    formValidated = false;
+                    validationMessage = validationMessage + "Message Required<br />";
+                }
+
+                if (formValidated) {
+                    $("#ValidationMessage").hide();
+                    $("#ContactForm").submit();
+                }
+                else {
+                    $("#ValidationMessage").html(validationMessage);
+                    $("#ValidationMessage").show();
+                }
+
+            });
+
+        });
+    </script>
+        
+}
