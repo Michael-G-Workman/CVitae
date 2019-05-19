@@ -16,42 +16,40 @@
         <br />
 
         @* Contact Form *@
-        <form method="post" id="ContactForm" action="/Home/Contact" class="w3-container">
+    <form method="post" id="ContactForm" action="/Home/Contact" class="w3-container">
 
-            @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-            <label for="ContactName" class="w3-text-teal"><b>Name</b></label>
-            <input type="text" class="w3-input w3-border w3-round" id="ContactName" name="ContactName" maxlength="150" placeholder="Name">
-            <br />
+        <label for="ContactName" class="w3-text-teal"><b>Name</b></label>
+        <input type="text" class="w3-input w3-border w3-round" id="ContactName" name="ContactName" maxlength="150" placeholder="Name">
+        <br />
 
-            <label for="ContactEmail" class="w3-text-teal"><b>Email</b></label>
-            <input type="email" class="w3-input w3-border w3-round" id="ContactEmail" name="ContactEmail" maxlength="100" placeholder="Email">
-            <br />
+        <label for="ContactEmail" class="w3-text-teal"><b>Email</b></label>
+        <input type="email" class="w3-input w3-border w3-round" id="ContactEmail" name="ContactEmail" maxlength="100" placeholder="Email">
+        <br />
 
-            <label for="ContactPhone" class="w3-text-teal"><b>Phone (include area code)</b></label>
-            <input type="text" class="w3-input w3-border w3-round" id="ContactPhone" name="ContactPhone" maxlength="20" placeholder="Phone">
-            <br />
+        <label for="ContactPhone" class="w3-text-teal"><b>Phone (include area code)</b></label>
+        <input type="text" class="w3-input w3-border w3-round" id="ContactPhone" name="ContactPhone" maxlength="20" placeholder="Phone">
+        <br />
 
-            <label for="ContactCategories_ID" class="w3-text-teal"><b>Interest</b></label><br />
-            @Html.DropDownList("ContactCategories_ID", (SelectList)ViewBag.Categories, "Select an Interest")
-            <br />
-            <br />
+        <label for="ContactCategories_ID" class="w3-text-teal"><b>Interest</b></label><br />
+        @Html.DropDownList("ContactCategories_ID", (SelectList)ViewBag.Categories, "Select an Interest")
+        <br />
+        <br />
 
-            <label for="WebMessage" class="w3-text-teal"><b>Message</b></label>
-            <textarea class="w3-input w3-border w3-round" id="WebMessage" name="WebMessage" maxlength="1000"></textarea>
-            <br />
-
-        </form>
+        <label for="WebMessage" class="w3-text-teal"><b>Message</b></label>
+        <textarea class="w3-input w3-border w3-round" id="WebMessage" name="WebMessage" maxlength="1000"></textarea>
+        <br />
 
         <div id="ValidationMessage" class="text-danger hide" style="color:red;">
         </div>
         <br />
-        <br />
 
-        @* Submit Button Outside of Form to Facilitate JQuery Form Validation *@
-        <button id="SendBTN" class="w3-btn w3-blue-grey">Send</button>
+        @* Submit Button Will Be Submitted With JQuery, Not By Default *@
+        <button type="button" id="SendBTN" class="w3-btn w3-blue-grey">Send</button>
         <br />
         <br />
+    </form>
 
     </div>
 
@@ -67,7 +65,7 @@
 
                 // vars for form validation
                 var formValidated = true;
-                var validationMessage = "Error: ";
+                var validationMessage = "Error:<br />";
 
                 // Contact Name
                 if ($("#ContactName").val().trim() == "") {
@@ -80,11 +78,31 @@
                     formValidated = false;
                     validationMessage = validationMessage + "Contact Email Required<br />";
                 }
+                else {
+
+                    // Test Contact Email for Proper Format Using Regular Expression
+                    var regEx = /^[a-zA-Z0-9._]+[a-zA-Z0-9]+@@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/;
+                    if (!regEx.test($("#ContactEmail").val()))
+                    {
+                        formValidated = false;
+                        validationMessage = validationMessage + "Contact Email Invalid Format<br />";
+                    }
+
+                    // Test Contact Email for Proper Length
+                    if ($("#ContactEmail").val().length < 8) {
+                        formValdiated = false;
+                        validationMessage = validationMessage + "Contact Email Not At Least 8 Characters<br />"
+                    }
+                }
 
                 // Contact Phone
                 if ($("#ContactPhone").val().trim() == "") {
                     formValidated = false;
                     validationMessage = validationMessage + "Contact Phone Number Required<br />";
+                }
+                else if ($("#ContactPhone").val().trim().length < 7) {
+                    formValidated = false;
+                    validationMessage = validationMessage + "Contact Phone Number Not at Least 7 Numbers<br />";
                 }
 
                 // Contact Categories
@@ -99,6 +117,7 @@
                     validationMessage = validationMessage + "Message Required<br />";
                 }
 
+                // If No Error, Submit Form, Else Display Error and Do Not Submit Form
                 if (formValidated) {
                     $("#ValidationMessage").hide();
                     $("#ContactForm").submit();
