@@ -63,68 +63,73 @@
 
             $("#SendBTN").click(function () {
 
+                // clear out previous error messages
+                $(".error").remove();
+
                 // vars for form validation
                 var formValidated = true;
-                var validationMessage = "Error:<br />";
+
+                // vars for form validation
+                var contactName = $("#ContactName");
+                var contactEmail = $("#ContactEmail");
+                var contactPhone = $("#ContactPhone");
+                var contactCategories = $("#ContactCategories_ID");
+                var webMessage = $("textarea#WebMessage");
 
                 // Contact Name
-                if ($("#ContactName").val().trim() == "") {
+                if (contactName.val().trim() == "") {
                     formValidated = false;
-                    validationMessage = validationMessage + "Contact Name Required<br />";
+                    contactName.after("<span class='error' style='color:red;'>Contact Name Required</span><br/>");
                 }
 
                 // Contact Email
-                if ($("#ContactEmail").val().trim() == "") {
+                if (contactEmail.val().trim() == "") {
                     formValidated = false;
-                    validationMessage = validationMessage + "Contact Email Required<br />";
+                    contactEmail.after("<span class='error' style='color:red;'>Contact Email Required</span><br/>");
                 }
                 else {
 
                     // Test Contact Email for Proper Format Using Regular Expression
                     var regEx = /^[a-zA-Z0-9._]+[a-zA-Z0-9]+@@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/;
-                    if (!regEx.test($("#ContactEmail").val()))
+                    if (!regEx.test(contactEmail.val()))
                     {
                         formValidated = false;
-                        validationMessage = validationMessage + "Contact Email Invalid Format<br />";
+                        contactEmail.after("<span class='error' style='color:red;'>Contact Email Invalid Format</span><br/>");
                     }
 
                     // Test Contact Email for Proper Length
-                    if ($("#ContactEmail").val().length < 8) {
+                    if (contactEmail.val().length < 8) {
                         formValdiated = false;
-                        validationMessage = validationMessage + "Contact Email Not At Least 8 Characters<br />"
+                        contactEmail.after("<span class='error' style='color:red;'>Contact Email Not At Least 8 Characters</span><br/>");
                     }
                 }
 
                 // Contact Phone
-                if ($("#ContactPhone").val().trim() == "") {
+                if (contactPhone.val().trim() == "") {
                     formValidated = false;
-                    validationMessage = validationMessage + "Contact Phone Number Required<br />";
+                    contactPhone.after("<span class='error' style='color:red;'>Contact Phone Number Required</span><br/>");
                 }
-                else if ($("#ContactPhone").val().trim().length < 7) {
+                else if (contactPhone.val().trim().length < 7) {
                     formValidated = false;
-                    validationMessage = validationMessage + "Contact Phone Number Not at Least 7 Numbers<br />";
+                    contactPhone.after("<span class='error' style='color:red;'>Contact Phone Number Not At Least 7 Numbers</span><br/>");
                 }
 
                 // Contact Categories
-                if ($("#ContactCategories_ID").val() == "") {
+                if (contactCategories.val() == "") {
                     formValidated = false;
-                    validationMessage = validationMessage + "Contact Interest Required<br />";
+                    contactCategories.after("<br /><span class='error' style='color:red;'>Contact Interest Required</span>");
                 }
 
                 // Web Message
-                if ($("textarea#WebMessage").val().trim() == "") {
+                if (webMessage.val().trim() == "") {
                     formValidated = false;
-                    validationMessage = validationMessage + "Message Required<br />";
+                    webMessage.after("<span class='error' style='color:red;'>Message Required</span><br/>");
                 }
 
-                // If No Error, Submit Form, Else Display Error and Do Not Submit Form
+                // If No Error, Clear Error Messages And Submit Form
                 if (formValidated) {
-                    $("#ValidationMessage").hide();
+                    $(".error").remove();
                     $("#ContactForm").submit();
-                }
-                else {
-                    $("#ValidationMessage").html(validationMessage);
-                    $("#ValidationMessage").show();
                 }
 
             });
