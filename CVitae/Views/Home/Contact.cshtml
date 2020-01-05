@@ -122,8 +122,27 @@
 
                 // Web Message
                 if (webMessage.val().trim() == "") {
+                    alert("Form validated false, empty webmessage");
                     formValidated = false;
                     webMessage.after("<span class='error' style='color:red;'>Message Required</span><br/>");
+                }
+                else if (((webMessage.val().toUpperCase().indexOf("ADULT") >= 0) && (webMessage.val().toUpperCase().indexOf("SEX") >= 0))
+                    || ((webMessage.val().toUpperCase().indexOf("ADULT") >= 0) && (webMessage.val().toUpperCase().indexOf("DATE") >= 0))
+                    || ((webMessage.val().toUpperCase().indexOf("ADULT") >= 0) && (webMessage.val().toUpperCase().indexOf("DATING") >= 0))
+                    || ((webMessage.val().toUpperCase().indexOf("ADULT") >= 0) && (webMessage.val().toUpperCase().indexOf("HOT") >= 0))
+                    || ((webMessage.val().toUpperCase().indexOf("GIRL") >= 0) && (webMessage.val().toUpperCase().indexOf("SEX") >= 0))
+                    || ((webMessage.val().toUpperCase().indexOf("GIRL") >= 0) && (webMessage.val().toUpperCase().indexOf("DATE") >= 0))
+                    || ((webMessage.val().toUpperCase().indexOf("GIRL") >= 0) && (webMessage.val().toUpperCase().indexOf("DATING") >= 0))
+                    || ((webMessage.val().toUpperCase().indexOf("GIRL") >= 0) && (webMessage.val().toUpperCase().indexOf("HOT") >= 0))
+                    || (webMessage.val().toUpperCase().indexOf("SEX") >= 0)
+                    || (webMessage.val().toUpperCase().indexOf("DATING") >= 0))
+                {
+                    formValidated = false;
+                    webMessage.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else
+                {
+                    formValidated = true;
                 }
 
                 // If No Error, Clear Error Messages And Submit Form
