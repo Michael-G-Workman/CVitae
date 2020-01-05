@@ -58,7 +58,10 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.ToUpper().Contains("GIRL") && (emailContact.WebMessage.ToUpper().Contains("DATING")))
                         || (emailContact.WebMessage.ToUpper().Contains("GIRL") && (emailContact.WebMessage.ToUpper().Contains("HOT")))
                         || (emailContact.WebMessage.ToUpper().Contains("SEX"))
-                        || (emailContact.WebMessage.ToUpper().Contains("DATING")))
+                        || (emailContact.WebMessage.ToUpper().Contains("DATING"))
+                        || (emailContact.WebMessage.ToUpper().Contains("SEO"))
+                        || (emailContact.WebMessage.ToUpper().Contains("S.E.O."))
+                        || (emailContact.WebMessage.ToUpper().Contains("GOOGLE")))
                     {
                         // do nothing, spam email
                         return View("Index");
