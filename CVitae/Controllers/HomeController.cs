@@ -82,12 +82,21 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.ToUpper().Contains("RAY BAN"))
                         || (emailContact.WebMessage.ToUpper().Contains("RAY-BAN"))
                         || (emailContact.WebMessage.ToUpper().Contains("RAYBAN"))
-                        || (emailContact.WebMessage.ToUpper().Contains("SUNGLASSES"))
+                        || (emailContact.WebMessage.ToUpper().Contains("SUNGLASS"))
                         || (emailContact.WebMessage.ToUpper().Contains("PENNY STOCK"))
-                        || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))
-                        || (emailContact.WebMessage.Contains("Vеrdienen Sie Gеld"))
-                        || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))
-                        || (emailContact.WebMessage.Contains("Passives Einkommеn")))
+                        || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // utf-8
+                        || (emailContact.WebMessage.Contains("Vеrdienen Sie Gеld"))             // utf-8
+                        || (emailContact.WebMessage.Contains("vеrdienen sie gеld"))             // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // utf-8
+                        || (emailContact.WebMessage.Contains("Passives Einkommеn"))             // utf-8
+                        || (emailContact.WebMessage.Contains("passives einkommеn"))             // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
+                        || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
+                        || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // ansi
+                        || (emailContact.WebMessage.Contains("Passives Einkommen"))             // ansi
+                        || (emailContact.WebMessage.Contains("passives einkommen"))             // ansi
+                        )
                     {
                         // do nothing, spam email
                         return View("Index");

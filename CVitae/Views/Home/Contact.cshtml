@@ -157,11 +157,19 @@
                         || (webMessage.val().toUpperCase().indexOf("RAY BAN") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("RAY-BAN") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("RAYBAN") >= 0)
-                        || (webMessage.val().toUpperCase().indexOf("SUNGLASSES") >= 0)
-                        || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)
-                        || (webMessage.val().indexOf("Vеrdienen Sie Gеld") >= 0)
-                        || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)
-                        || (webMessage.val().indexOf("Passives Einkommеn") >= 0)
+                        || (webMessage.val().toUpperCase().indexOf("SUNGLASS") >= 0)
+                        || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // utf-8
+                        || (webMessage.val().indexOf("Vеrdienen Sie Gеld") >= 0)                // utf-8
+                        || (webMessage.val().indexOf("vеrdienen sie gеld") >= 0)                // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)  // utf-8
+                        || (webMessage.val().indexOf("Passives Einkommеn") >= 0)                // utf-8
+                        || (webMessage.val().indexOf("passives einkommеn") >= 0)                // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // ansi
+                        || (webMessage.val().indexOf("Verdienen Sie Geld") >= 0)                // ansi
+                        || (webMessage.val().indexOf("verdienen sie geld") >= 0)                // ansi
+                        || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)  // ansi
+                        || (webMessage.val().indexOf("Passives Einkommen") >= 0)                // ansi
+                        || (webMessage.val().indexOf("passives einkommen") >= 0)                // ansi
                         || (webMessage.val().toUpperCase().indexOf("PENNY STOCK") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("GOOGLE") >= 0))
                 {
