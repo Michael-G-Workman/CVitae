@@ -71,8 +71,14 @@ namespace CVitae.Controllers
                         && (emailContact.WebMessage.ToUpper().Contains("ADVERTISEMENT")))
                         || (emailContact.WebMessage.ToUpper().Contains("OAKLEY") 
                         && (emailContact.WebMessage.ToUpper().Contains("RAY BAN")))
-                        || (emailContact.WebMessage.ToUpper().Contains("PASSIVE") 
-                        && (emailContact.WebMessage.ToUpper().Contains("INCOME")))
+                        || (emailContact.WebMessage.ToUpper().Contains("PASSIVE")       // ansi
+                        && (emailContact.WebMessage.ToUpper().Contains("INCOME")))      // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("PASSIVE")       // utf-8
+                        && (emailContact.WebMessage.ToUpper().Contains("INCOME")))      // utf-8
+                        || (emailContact.WebMessage.Contains("Passive")                 // utf-8
+                        && (emailContact.WebMessage.Contains("Income")))                // utf-8
+                        || (emailContact.WebMessage.Contains("passive")                 // utf-8
+                        && (emailContact.WebMessage.Contains("income")))                // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("SEX"))
                         || (emailContact.WebMessage.ToUpper().Contains("DATING"))
                         || (emailContact.WebMessage.ToUpper().Contains("SEO"))
@@ -88,14 +94,20 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.Contains("Vеrdienen Sie Gеld"))             // utf-8
                         || (emailContact.WebMessage.Contains("vеrdienen sie gеld"))             // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("EINKOMMEN"))            // utf-8
                         || (emailContact.WebMessage.Contains("Passives Einkommеn"))             // utf-8
+                        || (emailContact.WebMessage.Contains("Einkommеn"))                      // utf-8
                         || (emailContact.WebMessage.Contains("passives einkommеn"))             // utf-8
+                        || (emailContact.WebMessage.Contains("einkommеn"))                      // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
                         || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("EINKOMMEN"))            // ansi
                         || (emailContact.WebMessage.Contains("Passives Einkommen"))             // ansi
+                        || (emailContact.WebMessage.Contains("Einkommen"))                      // ansi
                         || (emailContact.WebMessage.Contains("passives einkommen"))             // ansi
+                        || (emailContact.WebMessage.Contains("einkommen"))                      // ansi
                         )
                     {
                         // do nothing, spam email

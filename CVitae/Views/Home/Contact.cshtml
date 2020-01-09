@@ -147,8 +147,14 @@
                         && (webMessage.val().toUpperCase().indexOf("ADVERTISEMENT") >= 0))
                         || ((webMessage.val().toUpperCase().indexOf("OAKLEY") >= 0)
                         && (webMessage.val().toUpperCase().indexOf("RAY BAN") >= 0))
-                        || ((webMessage.val().toUpperCase().indexOf("PASSIVE") >= 0)
-                        && (webMessage.val().toUpperCase().indexOf("INCOME") >= 0))
+                        || ((webMessage.val().toUpperCase().indexOf("PASSIVE") >= 0)    // ansi
+                        && (webMessage.val().toUpperCase().indexOf("INCOME") >= 0))     // ansi
+                        || ((webMessage.val().toUpperCase().indexOf("PASSIVE") >= 0)    // utf-8
+                        && (webMessage.val().toUpperCase().indexOf("INCOME") >= 0))     // utf-8
+                        || ((webMessage.val().indexOf("Passive") >= 0)                  // utf-8
+                        && (webMessage.val().indexOf("Income") >= 0))                   // utf-8
+                        || ((webMessage.val().indexOf("passive") >= 0)                  // utf-8
+                        && (webMessage.val().indexOf("income") >= 0))                   // utf-8
                         || (webMessage.val().toUpperCase().indexOf("SEX") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("DATING") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("SEO") >= 0)
@@ -162,14 +168,20 @@
                         || (webMessage.val().indexOf("Vеrdienen Sie Gеld") >= 0)                // utf-8
                         || (webMessage.val().indexOf("vеrdienen sie gеld") >= 0)                // utf-8
                         || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)  // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("EINKOMMEN") >= 0)           // utf-8
                         || (webMessage.val().indexOf("Passives Einkommеn") >= 0)                // utf-8
+                        || (webMessage.val().indexOf("Einkommеn") >= 0)                         // utf-8
                         || (webMessage.val().indexOf("passives einkommеn") >= 0)                // utf-8
+                        || (webMessage.val().indexOf("einkommеn") >= 0)                         // utf-8
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // ansi
                         || (webMessage.val().indexOf("Verdienen Sie Geld") >= 0)                // ansi
                         || (webMessage.val().indexOf("verdienen sie geld") >= 0)                // ansi
                         || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)  // ansi
+                        || (webMessage.val().toUpperCase().indexOf("EINKOMMEN") >= 0)           // ansi
                         || (webMessage.val().indexOf("Passives Einkommen") >= 0)                // ansi
+                        || (webMessage.val().indexOf("Einkommen") >= 0)                         // ansi
                         || (webMessage.val().indexOf("passives einkommen") >= 0)                // ansi
+                        || (webMessage.val().indexOf("einkommen") >= 0)                         // ansi
                         || (webMessage.val().toUpperCase().indexOf("PENNY STOCK") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("GOOGLE") >= 0))
                 {
