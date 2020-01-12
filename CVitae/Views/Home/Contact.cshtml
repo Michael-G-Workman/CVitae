@@ -173,6 +173,8 @@
                         || (webMessage.val().indexOf("Einkommеn") >= 0)                         // utf-8
                         || (webMessage.val().indexOf("passives einkommеn") >= 0)                // utf-8
                         || (webMessage.val().indexOf("einkommеn") >= 0)                         // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("SEX") >= 0)                 // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("SPAM") >= 0)                // utf-8
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // ansi
                         || (webMessage.val().indexOf("Verdienen Sie Geld") >= 0)                // ansi
                         || (webMessage.val().indexOf("verdienen sie geld") >= 0)                // ansi
@@ -182,6 +184,7 @@
                         || (webMessage.val().indexOf("Einkommen") >= 0)                         // ansi
                         || (webMessage.val().indexOf("passives einkommen") >= 0)                // ansi
                         || (webMessage.val().indexOf("einkommen") >= 0)                         // ansi
+                        || (webMessage.val().toUpperCase().indexOf("SPAM") >= 0)                // ansi
                         || (webMessage.val().toUpperCase().indexOf("PENNY STOCK") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("GOOGLE") >= 0))
                 {

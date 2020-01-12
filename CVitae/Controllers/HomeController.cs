@@ -99,6 +99,8 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.Contains("Einkommеn"))                      // utf-8
                         || (emailContact.WebMessage.Contains("passives einkommеn"))             // utf-8
                         || (emailContact.WebMessage.Contains("einkommеn"))                      // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("SEX"))                  // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("SPAM"))                 // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
                         || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
@@ -108,6 +110,7 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.Contains("Einkommen"))                      // ansi
                         || (emailContact.WebMessage.Contains("passives einkommen"))             // ansi
                         || (emailContact.WebMessage.Contains("einkommen"))                      // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("SPAM"))                 // ansi
                         )
                     {
                         // do nothing, spam email
