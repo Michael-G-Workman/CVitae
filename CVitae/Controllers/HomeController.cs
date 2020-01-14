@@ -101,6 +101,7 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.Contains("einkommеn"))                      // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("SEX"))                  // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("SPAM"))                 // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("DATING"))               // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
                         || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
