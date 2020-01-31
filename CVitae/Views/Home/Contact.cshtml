@@ -81,6 +81,37 @@
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Contact Name Required</span><br/>");
                 }
+                else if (contactName.val().toUpperCase().indexOf("SEX") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("SEX") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("ADULT") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("DATING") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("ADULT") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("DATING") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+
 
                 // Contact Email
                 if (contactEmail.val().trim() == "") {
@@ -112,6 +143,34 @@
                 else if (contactPhone.val().trim().length < 7) {
                     formValidated = false;
                     contactPhone.after("<span class='error' style='color:red;'>Contact Phone Number Not At Least 7 Numbers</span><br/>");
+                }
+                else if (contactPhone.val().toUpperCase().indexOf("SEX") >= 0) {    // ansi
+                    formValidated = false;
+                    contactPhone.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactPhone.val().toUpperCase().indexOf("SEX") >= 0) {    // utf-8
+                    formValidated = false;
+                    contactPhone.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactPhone.val().toUpperCase().indexOf("ADULT") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactPhone.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactPhone.val().toUpperCase().indexOf("DATING") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactPhone.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactPhone.val().toUpperCase().indexOf("ADULT") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactPhone.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactPhone.val().toUpperCase().indexOf("DATING") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactPhone.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
 
                 // Contact Categories
@@ -194,9 +253,6 @@
                     formValidated = false;
                     webMessage.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
 
-                } else {
-
-                    formValidated = true;
                 }
 
                 // If No Error, Clear Error Messages And Submit Form

@@ -49,6 +49,7 @@ namespace CVitae.Controllers
                 // update database with contact information
                 if (ModelState.IsValid)
                 {
+
                     if ((emailContact.WebMessage.ToUpper().Contains("ADULT") 
                         && (emailContact.WebMessage.ToUpper().Contains("SEX")))
                         || (emailContact.WebMessage.ToUpper().Contains("ADULT") 
@@ -103,6 +104,12 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.ToUpper().Contains("SPAM"))                 // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("DATING"))               // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("BITCOIN"))              // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("SEX"))                 // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("ADULT"))               // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("DATING"))              // utf-8
+                        || (emailContact.ContactPhone.ToUpper().Contains("SEX"))                // utf-8
+                        || (emailContact.ContactPhone.ToUpper().Contains("ADULT"))              // utf-8
+                        || (emailContact.ContactPhone.ToUpper().Contains("DATING"))             // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
                         || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
@@ -114,10 +121,19 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.Contains("einkommen"))                      // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("SPAM"))                 // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("BITCOIN"))              // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("SEX"))                 // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("ADULT"))               // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("DATING"))              // ansi
+                        || (emailContact.ContactPhone.ToUpper().Contains("SEX"))                // ansi
+                        || (emailContact.ContactPhone.ToUpper().Contains("ADULT"))              // ansi
+                        || (emailContact.ContactPhone.ToUpper().Contains("DATING"))             // ansi
                         )
                     {
-                        // do nothing, spam email
-                        return View("Index");
+                        // make error message
+                        ViewBag.ErrorMessage = "Invalid Message Content, Message Not Sent";
+
+                        // show error message
+                        return View("~/Views/Shared/Error.cshtml");
                     }
                     else
                     {
