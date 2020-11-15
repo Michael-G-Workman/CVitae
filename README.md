@@ -6,7 +6,7 @@ Azure Cloud Platform Generic URL: https://cvitae20181226024341.azurewebsites.net
 
 Permanent URL: http://www.michaelgworkman.com
 
-First version of CV MVC 5 web application which will be on domain michaelgworkman.com
+First version of CV Model View Controller (MVC) web application which will be on domain michaelgworkman.com
 
 This MVC web application has been implemented with database first Entity Framework,
 but is different than a normal MVC web application in that it uses GUID for primary key ID in EF mdoels and database tables,
