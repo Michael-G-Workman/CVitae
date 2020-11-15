@@ -110,6 +110,12 @@ namespace CVitae.Controllers
                         || (emailContact.ContactPhone.ToUpper().Contains("SEX"))                // utf-8
                         || (emailContact.ContactPhone.ToUpper().Contains("ADULT"))              // utf-8
                         || (emailContact.ContactPhone.ToUpper().Contains("DATING"))             // utf-8
+                        || (emailContact.ContactPhone.ToUpper().Contains("PAYMENT"))            // utf-8
+                        || (emailContact.ContactPhone.ToUpper().Contains("EINNAHMEN"))          // utf-8
+                        || (emailContact.ContactPhone.ToUpper().Contains("ZAHLUNG"))            // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("PAYMENT"))              // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("ZAHLUNG"))              // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("EINNAHMEN"))            // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
                         || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi

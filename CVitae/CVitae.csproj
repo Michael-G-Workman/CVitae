@@ -148,6 +148,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\Avatar_1.jpg" />
     <Content Include="Content\Images\Me_avatar.jpg" />
+    <Content Include="Content\Images\Me_avatar_2.jpg" />
     <Content Include="Content\Images\microsoftazure.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
