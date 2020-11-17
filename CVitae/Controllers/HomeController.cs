@@ -95,6 +95,8 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.Contains("Vеrdienen Sie Gеld"))             // utf-8
                         || (emailContact.WebMessage.Contains("vеrdienen sie gеld"))             // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("PASSIVES EINKOMMEN"))  // utf-8
+                        || (emailContact.ContactEmail.ToUpper().Contains("PASSIVESEINKOMMEN"))  // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("EINKOMMEN"))            // utf-8
                         || (emailContact.WebMessage.Contains("Passives Einkommеn"))             // utf-8
                         || (emailContact.WebMessage.Contains("Einkommеn"))                      // utf-8
@@ -107,19 +109,29 @@ namespace CVitae.Controllers
                         || (emailContact.ContactName.ToUpper().Contains("SEX"))                 // utf-8
                         || (emailContact.ContactName.ToUpper().Contains("ADULT"))               // utf-8
                         || (emailContact.ContactName.ToUpper().Contains("DATING"))              // utf-8
-                        || (emailContact.ContactPhone.ToUpper().Contains("SEX"))                // utf-8
-                        || (emailContact.ContactPhone.ToUpper().Contains("ADULT"))              // utf-8
-                        || (emailContact.ContactPhone.ToUpper().Contains("DATING"))             // utf-8
-                        || (emailContact.ContactPhone.ToUpper().Contains("PAYMENT"))            // utf-8
-                        || (emailContact.ContactPhone.ToUpper().Contains("EINNAHMEN"))          // utf-8
-                        || (emailContact.ContactPhone.ToUpper().Contains("ZAHLUNG"))            // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("SEX"))                // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("ADULT"))              // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("DATING"))             // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("PAYMENT"))            // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("EINNAHMEN"))          // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("ZAHLUNG"))            // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("PASSIVE INCOME"))     // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("INCOME"))             // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("HENRYESSED"))         // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("HENRY ESSED"))        // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("HENRYESSED"))          // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("HENRY ESSED"))          // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PAYMENT"))              // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("ZAHLUNG"))              // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("EINNAHMEN"))            // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("PASSIVE INCOME"))       // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("INCOME"))               // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
                         || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("PASSIVES EINKOMMEN"))  // ansi
+                        || (emailContact.ContactEmail.ToUpper().Contains("PASSIVESEINKOMMEN"))   // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("EINKOMMEN"))            // ansi
                         || (emailContact.WebMessage.Contains("Passives Einkommen"))             // ansi
                         || (emailContact.WebMessage.Contains("Einkommen"))                      // ansi
@@ -130,9 +142,12 @@ namespace CVitae.Controllers
                         || (emailContact.ContactName.ToUpper().Contains("SEX"))                 // ansi
                         || (emailContact.ContactName.ToUpper().Contains("ADULT"))               // ansi
                         || (emailContact.ContactName.ToUpper().Contains("DATING"))              // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("PASSIVE INCOME"))      // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("INCOME"))              // ansi
                         || (emailContact.ContactPhone.ToUpper().Contains("SEX"))                // ansi
                         || (emailContact.ContactPhone.ToUpper().Contains("ADULT"))              // ansi
                         || (emailContact.ContactPhone.ToUpper().Contains("DATING"))             // ansi
+                        
                         )
                     {
                         // make error message
