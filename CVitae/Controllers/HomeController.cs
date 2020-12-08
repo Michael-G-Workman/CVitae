@@ -179,6 +179,38 @@ namespace CVitae.Controllers
                         // send email
                         mailer.Send();
 
+
+                        // create email object for text message and initialize data
+                        OutlookMailer textSender = new OutlookMailer();
+                        textSender.ToEmail = "3214329295@txt.att.net";
+                        textSender.FromEmail = emailContact.ContactEmail;
+                        textSender.FromName = emailContact.ContactName;
+
+                        // get the text category and set the text body
+                        string textCategory = db.ContactCategories.Where(x => x.ID == emailContact.ContactCategories_ID).SingleOrDefault().category;
+                        textSender.Subject = "Michael G. Workman Career Inquiry";
+                        textSender.Body = "From Name: " + emailContact.ContactName +
+                                      " From Email: " + emailContact.ContactEmail +
+                                      " Phone: " + emailContact.ContactPhone +
+                                      " Category: " + textCategory +
+                                      "<br>" + emailContact.WebMessage;
+
+                        // send text message
+                        textSender.Send();
+
+                        // create email object for second text message, a copy of first text message, and initialize data
+                        OutlookMailer textSender2 = new OutlookMailer();
+                        textSender2.ToEmail = "3213946240@txt.att.net";
+                        textSender2.FromEmail = textSender.FromEmail;
+                        textSender2.FromName = textSender.FromName;
+
+                        // get the second text category and set the second text body
+                        textSender2.Subject = textSender.Subject;
+                        textSender2.Body = textSender.Body;
+
+                        // send second text message
+                        textSender2.Send();
+
                         return View("ContactConfirmation");
                     }
                 }
