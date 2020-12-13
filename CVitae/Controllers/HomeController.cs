@@ -119,6 +119,7 @@ namespace CVitae.Controllers
                         || (emailContact.ContactName.ToUpper().Contains("INCOME"))             // utf-8
                         || (emailContact.ContactName.ToUpper().Contains("HENRYESSED"))         // utf-8
                         || (emailContact.ContactName.ToUpper().Contains("HENRY ESSED"))        // utf-8
+                        || (emailContact.ContactEmail.ToUpper().Contains(".RU"))                // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("HENRYESSED"))          // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("HENRY ESSED"))          // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PAYMENT"))              // ansi
@@ -131,7 +132,8 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // ansi
                         || (emailContact.ContactName.ToUpper().Contains("PASSIVES EINKOMMEN"))  // ansi
-                        || (emailContact.ContactEmail.ToUpper().Contains("PASSIVESEINKOMMEN"))   // ansi
+                        || (emailContact.ContactEmail.ToUpper().Contains("PASSIVESEINKOMMEN"))  // ansi
+                        || (emailContact.ContactEmail.ToUpper().Contains(".RU"))                // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("EINKOMMEN"))            // ansi
                         || (emailContact.WebMessage.Contains("Passives Einkommen"))             // ansi
                         || (emailContact.WebMessage.Contains("Einkommen"))                      // ansi

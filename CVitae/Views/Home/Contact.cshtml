@@ -141,6 +141,16 @@
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
+                else if (contactEmail.val().toUpperCase().indexOf(".RU") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactEmail.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactEmail.val().toUpperCase().indexOf(".RU") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactEmail.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
                 else if (contactName.val().toUpperCase().indexOf("ADULT") >= 0) { // ansi
 
                     formValidated = false;
