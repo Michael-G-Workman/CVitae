@@ -92,6 +92,9 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.ToUpper().Contains("SUNGLASS"))
                         || (emailContact.WebMessage.ToUpper().Contains("PENNY STOCK"))
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN"))            // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("VERDIENEN"))           // utf-8
+                        || (emailContact.ContactEmail.ToUpper().Contains("VERDIENEN"))          // utf-8
                         || (emailContact.WebMessage.Contains("Vеrdienen Sie Gеld"))             // utf-8
                         || (emailContact.WebMessage.Contains("vеrdienen sie gеld"))             // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // utf-8
@@ -128,6 +131,9 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVE INCOME"))       // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("INCOME"))               // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN SIE GELD"))   // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("VERDIENEN"))            // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("VERDIENEN"))           // ansi
+                        || (emailContact.ContactEmail.ToUpper().Contains("VERDIENEN"))          // ansi
                         || (emailContact.WebMessage.Contains("Verdienen Sie Geld"))             // ansi
                         || (emailContact.WebMessage.Contains("verdienen sie geld"))             // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PASSIVES EINKOMMEN"))   // ansi

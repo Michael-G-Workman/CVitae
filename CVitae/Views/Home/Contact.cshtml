@@ -126,6 +126,16 @@
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
+                else if (contactName.val().toUpperCase().indexOf("EINKOMMEN") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("VERDIENEN") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
                 else if (contactName.val().toUpperCase().indexOf("HENRYESSED") >= 0) { // utf-8
 
                     formValidated = false;
@@ -192,6 +202,11 @@
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
                 else if (contactName.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("VERDIENEN") >= 0) { // ansi
 
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
@@ -332,6 +347,7 @@
                         || (webMessage.val().toUpperCase().indexOf("RAYBAN") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("SUNGLASS") >= 0)
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("VERDIENEN") >= 0)           // utf-8
                         || (webMessage.val().indexOf("Vеrdienen Sie Gеld") >= 0)                // utf-8
                         || (webMessage.val().indexOf("vеrdienen sie gеld") >= 0)                // utf-8
                         || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)  // utf-8
@@ -349,6 +365,7 @@
                         || (webMessage.val().toUpperCase().indexOf("PAYMENT") >= 0)             // utf-8
                         || (webMessage.val().toUpperCase().indexOf("REVENUE") >= 0)             // utf-8
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // ansi
+                        || (webMessage.val().toUpperCase().indexOf("VERDIENEN") >= 0)           // ansi
                         || (webMessage.val().toUpperCase().indexOf("EINNAHMEN") >= 0)           // ansi
                         || (webMessage.val().toUpperCase().indexOf("ZAHLUNG") >= 0)             // ansi
                         || (webMessage.val().toUpperCase().indexOf("PAYMENT") >= 0)             // ansi
