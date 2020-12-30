@@ -151,6 +151,21 @@
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
+                else if (contactName.val().toUpperCase().indexOf("SOCIAL MEDIA") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("WEB DOMAIN") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("FEEDBACK FORM") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
                 else if (contactEmail.val().toUpperCase().indexOf(".RU") >= 0) { // utf-8
 
                     formValidated = false;
@@ -217,6 +232,21 @@
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
                 else if (contactName.val().toUpperCase().indexOf("HENRY ESSED") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("SOCIAL MEDIA") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("WEB DOMAIN") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("FEEDBACK FORM") >= 0) { // ansi
 
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
@@ -364,12 +394,18 @@
                         || (webMessage.val().toUpperCase().indexOf("ZAHLUNG") >= 0)             // utf-8
                         || (webMessage.val().toUpperCase().indexOf("PAYMENT") >= 0)             // utf-8
                         || (webMessage.val().toUpperCase().indexOf("REVENUE") >= 0)             // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("SOCIAL MEDIA") >= 0)        // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("WEB DOMAIN") >= 0)          // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("FEEDBACK FORM") >= 0)       // utf-8
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // ansi
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN") >= 0)           // ansi
                         || (webMessage.val().toUpperCase().indexOf("EINNAHMEN") >= 0)           // ansi
                         || (webMessage.val().toUpperCase().indexOf("ZAHLUNG") >= 0)             // ansi
                         || (webMessage.val().toUpperCase().indexOf("PAYMENT") >= 0)             // ansi
                         || (webMessage.val().toUpperCase().indexOf("REVENUE") >= 0)             // ansi
+                        || (webMessage.val().toUpperCase().indexOf("SOCIAL MEDIA") >= 0)        // ansi
+                        || (webMessage.val().toUpperCase().indexOf("WEB DOMAIN") >= 0)          // ansi
+                        || (webMessage.val().toUpperCase().indexOf("FEEDBACK FORM") >= 0)       // ansi
                         || (webMessage.val().indexOf("Verdienen Sie Geld") >= 0)                // ansi
                         || (webMessage.val().indexOf("verdienen sie geld") >= 0)                // ansi
                         || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)  // ansi
