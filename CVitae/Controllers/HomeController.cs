@@ -129,6 +129,8 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.ToUpper().Contains("WEB DOMAIN"))          // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("FEEDBACK FORM"))       // utf-8
                         || (emailContact.ContactName.ToUpper().Contains("FEEDBACK FORM"))      // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("PAID COMMISSION"))     // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("PAID COMMISSION"))    // utf-8
                         || (emailContact.ContactEmail.ToUpper().Contains(".RU"))               // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("HENRYESSED"))          // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("HENRY ESSED"))         // ansi
@@ -162,12 +164,14 @@ namespace CVitae.Controllers
                         || (emailContact.ContactPhone.ToUpper().Contains("SEX"))                // ansi
                         || (emailContact.ContactPhone.ToUpper().Contains("ADULT"))              // ansi
                         || (emailContact.ContactPhone.ToUpper().Contains("DATING"))             // ansi
-                        || (emailContact.ContactName.ToUpper().Contains("SOCIAL MEDIA"))       // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("SOCIAL MEDIA"))        // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("SOCIAL MEDIA"))         // ansi
                         || (emailContact.ContactName.ToUpper().Contains("WEB DOMAIN"))          // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("WEB DOMAIN"))           // ansi
                         || (emailContact.ContactName.ToUpper().Contains("FEEDBACK FORM"))       // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("FEEDBACK FORM"))        // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("PAID COMMISSION"))     // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("PAID COMMISSION"))      // ansi
                         )
                     {
                         // make error message
