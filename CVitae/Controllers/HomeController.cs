@@ -132,8 +132,28 @@ namespace CVitae.Controllers
                         || (emailContact.WebMessage.ToUpper().Contains("PAID COMMISSION"))     // utf-8
                         || (emailContact.ContactName.ToUpper().Contains("PAID COMMISSION"))    // utf-8
                         || (emailContact.ContactEmail.ToUpper().Contains(".RU"))               // utf-8
-                        || (emailContact.WebMessage.ToUpper().Contains("HENRYESSED"))          // ansi
-                        || (emailContact.WebMessage.ToUpper().Contains("HENRY ESSED"))         // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("PHARMACY"))            // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("PHARMACY"))           // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("N95"))                 // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("N95"))                 // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("BACKLINK"))             // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("BACKLINK"))            // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("DOMAIN"))               // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("DOMAIN"))              // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("DOMAIN SERVICES"))      // utf-8
+                        || (emailContact.ContactName.ToUpper().Contains("DOMAIN SERVICES"))     // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("PHARMACY"))             // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("PHARMACY"))            // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("N95"))                  // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("N95"))                 // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("BACKLINK"))             // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("BACKLINK"))            // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("DOMAIN"))               // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("DOMAIN"))              // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("DOMAIN SERVICES"))      // ansi
+                        || (emailContact.ContactName.ToUpper().Contains("DOMAIN SERVICES"))     // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("HENRYESSED"))           // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("HENRY ESSED"))          // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PAYMENT"))              // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("ZAHLUNG"))              // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("EINNAHMEN"))            // ansi

@@ -171,10 +171,20 @@
                     formValidated = false;
                     contactEmail.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
+                else if (contactEmail.val().toUpperCase().indexOf("MICHAELGWORKMAN.COM") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactEmail.after("<span class='error' style='color:red;'>Improper Domain Usage</span><br/>");
+                }
                 else if (contactEmail.val().toUpperCase().indexOf(".RU") >= 0) { // ansi
 
                     formValidated = false;
                     contactEmail.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactEmail.val().toUpperCase().indexOf("MICHAELGWORKMAN.COM") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactEmail.after("<span class='error' style='color:red;'>Improper Domain Usage</span><br/>");
                 }
                 else if (contactName.val().toUpperCase().indexOf("ADULT") >= 0) { // ansi
 
@@ -271,6 +281,56 @@
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
+                else if (contactName.val().toUpperCase().indexOf("PHARMACY") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("PHARMACY") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("N95") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("N95") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("BACKLINK") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("BACKLINK") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("DOMAIN") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("DOMAIN") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("DOMAIN SERVICES") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("DOMAIN SERVICES") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
                 else {
                     formValidated = true;
                 }
@@ -296,6 +356,7 @@
                         formValdiated = false;
                         contactEmail.after("<span class='error' style='color:red;'>Contact Email Not At Least 8 Characters</span><br/>");
                     }
+
                 }
 
                 // Contact Phone
@@ -408,6 +469,11 @@
                         || (webMessage.val().toUpperCase().indexOf("WEB DOMAIN") >= 0)          // utf-8
                         || (webMessage.val().toUpperCase().indexOf("FEEDBACK FORM") >= 0)       // utf-8
                         || (webMessage.val().toUpperCase().indexOf("PAID COMMISSION") >= 0)     // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("PHARMACY") >= 0)            // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("N95") >= 0)                 // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("BACKLINK") >= 0)            // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("DOMAIN") >= 0)              // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("DOMAIN SERVICES") >= 0)     // utf-8
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN SIE GELD") >= 0)  // ansi
                         || (webMessage.val().toUpperCase().indexOf("VERDIENEN") >= 0)           // ansi
                         || (webMessage.val().toUpperCase().indexOf("EINNAHMEN") >= 0)           // ansi
@@ -417,7 +483,7 @@
                         || (webMessage.val().toUpperCase().indexOf("SOCIAL MEDIA") >= 0)        // ansi
                         || (webMessage.val().toUpperCase().indexOf("WEB DOMAIN") >= 0)          // ansi
                         || (webMessage.val().toUpperCase().indexOf("FEEDBACK FORM") >= 0)       // ansi
-                        || (webMessage.val().toUpperCase().indexOf("PAID COMMISSION") >= 0)       // ansi
+                        || (webMessage.val().toUpperCase().indexOf("PAID COMMISSION") >= 0)     // ansi
                         || (webMessage.val().indexOf("Verdienen Sie Geld") >= 0)                // ansi
                         || (webMessage.val().indexOf("verdienen sie geld") >= 0)                // ansi
                         || (webMessage.val().toUpperCase().indexOf("PASSIVES EINKOMMEN") >= 0)  // ansi
@@ -428,7 +494,12 @@
                         || (webMessage.val().indexOf("einkommen") >= 0)                         // ansi
                         || (webMessage.val().toUpperCase().indexOf("SPAM") >= 0)                // ansi
                         || (webMessage.val().toUpperCase().indexOf("BITCOIN") >= 0)             // ansi
-                        || (webMessage.val().toUpperCase().indexOf("PENNY STOCK") >= 0)
+                        || (webMessage.val().toUpperCase().indexOf("PENNY STOCK") >= 0)         // ansi
+                        || (webMessage.val().toUpperCase().indexOf("PHARMACY") >= 0)            // ansi
+                        || (webMessage.val().toUpperCase().indexOf("N95") >= 0)                 // ansi
+                        || (webMessage.val().toUpperCase().indexOf("BACKLINK") >= 0)            // ansi
+                        || (webMessage.val().toUpperCase().indexOf("DOMAIN") >= 0)              // ansi
+                        || (webMessage.val().toUpperCase().indexOf("DOMAIN SERVICES") >= 0)     // ansi
                         || (webMessage.val().toUpperCase().indexOf("GOOGLE") >= 0))
                 {
                     formValidated = false;
