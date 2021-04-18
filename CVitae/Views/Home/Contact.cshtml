@@ -331,6 +331,16 @@
                     formValidated = false;
                     contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
                 }
+                else if (contactName.val().toUpperCase().indexOf("TRAFFIC") >= 0) { // ansi
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
+                else if (contactName.val().toUpperCase().indexOf("TRAFFIC") >= 0) { // utf-8
+
+                    formValidated = false;
+                    contactName.after("<span class='error' style='color:red;'>Invalid Content</span><br/>");
+                }
                 else {
                     formValidated = true;
                 }
@@ -430,10 +440,14 @@
                         && (webMessage.val().toUpperCase().indexOf("ADVERTISEMENT") >= 0))
                         || ((webMessage.val().toUpperCase().indexOf("OAKLEY") >= 0)
                         && (webMessage.val().toUpperCase().indexOf("RAY BAN") >= 0))
+                        || (webMessage.val().toUpperCase().indexOf("TRAFFIC") >= 0)     // ansi
+                        || (webMessage.val().toUpperCase().indexOf("MICHAELGWORKMAN.COM") >= 0) // ansi
                         || ((webMessage.val().toUpperCase().indexOf("PASSIVE") >= 0)    // ansi
                         && (webMessage.val().toUpperCase().indexOf("INCOME") >= 0))     // ansi
                         || ((webMessage.val().toUpperCase().indexOf("PASSIVE") >= 0)    // utf-8
                         && (webMessage.val().toUpperCase().indexOf("INCOME") >= 0))     // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("TRAFFIC") >= 0)     // utf-8
+                        || (webMessage.val().toUpperCase().indexOf("MICHAELGWORKMAN.COM") >= 0) // utf-8
                         || ((webMessage.val().indexOf("Passive") >= 0)                  // utf-8
                         && (webMessage.val().indexOf("Income") >= 0))                   // utf-8
                         || ((webMessage.val().indexOf("passive") >= 0)                  // utf-8

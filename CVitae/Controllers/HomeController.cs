@@ -142,6 +142,12 @@ namespace CVitae.Controllers
                         || (emailContact.ContactName.ToUpper().Contains("DOMAIN"))              // utf-8
                         || (emailContact.WebMessage.ToUpper().Contains("DOMAIN SERVICES"))      // utf-8
                         || (emailContact.ContactName.ToUpper().Contains("DOMAIN SERVICES"))     // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("MICHAELGWORKMAN.COM"))  // utf-8
+                        || (emailContact.ContactEmail.ToUpper().Contains("MICHAELGWORKMAN.COM"))// utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("TRAFFIC"))              // utf-8
+                        || (emailContact.WebMessage.ToUpper().Contains("MICHAELGWORKMAN.COM"))  // ansi
+                        || (emailContact.WebMessage.ToUpper().Contains("TRAFFIC"))              // ansi
+                        || (emailContact.ContactEmail.ToUpper().Contains("MICHAELGWORKMAN.COM"))// ansi
                         || (emailContact.WebMessage.ToUpper().Contains("PHARMACY"))             // ansi
                         || (emailContact.ContactName.ToUpper().Contains("PHARMACY"))            // ansi
                         || (emailContact.WebMessage.ToUpper().Contains("N95"))                  // ansi
