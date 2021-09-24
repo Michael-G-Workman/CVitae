@@ -2,10 +2,6 @@ CVitae
 
 By Michael G. Workman
 
-Azure Cloud Platform Generic URL: https://cvitae20181226024341.azurewebsites.net/
-
-Permanent URL: http://www.michaelgworkman.com
-
 First version of CV Model View Controller (MVC) web application which will be on domain michaelgworkman.com
 
 This MVC web application has been implemented with database first Entity Framework,
