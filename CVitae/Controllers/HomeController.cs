@@ -27,6 +27,7 @@ namespace CVitae.Controllers
         }
 
         // Contact GET
+        /*
         public ActionResult Contact()
         {
             ViewBag.Message = "Michael G. Workman Contact";
@@ -306,7 +307,7 @@ namespace CVitae.Controllers
                 smtp.Port = OutlookPort;
                 smtp.EnableSsl = OutlookSSL;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new System.Net.NetworkCredential("michael.g.workman@outlook.com", "REDACTED");
+                smtp.Credentials = new System.Net.NetworkCredential("michael.g.workman@outlook.com", "C4m3r0n14n5^&*");
 
                 MailMessage message = new MailMessage();
                 message.From = new MailAddress("michael.g.workman@outlook.com");
@@ -317,5 +318,6 @@ namespace CVitae.Controllers
                 smtp.Send(message);
             }
         }
+        */
     }
 }
